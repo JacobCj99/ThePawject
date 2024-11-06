@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Pawject | About Jason</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <!-- Hamburger Icon for Mobile -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- Navigation Links -->
+            <ul id="menu" class="nav-links">
+                <li><a href="index.html"><i class="fas fa-paw"></i> Home</a></li>
+                <li><a href="blog.html"><i class="fas fa-paw"></i> Blog</a></li>
+                <li><a href="about.html"><i class="fas fa-paw"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-paw"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Jason Section -->
+    <section id="about" style="padding: 50px; text-align: center;">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+            <!-- Picture of Jason -->
+            <div style="width: 200px; height: 200px; border: 2px solid #333; background-color: #f0f0f0; text-align: center;">
+                <img src="/css/jason dating pic.jpg" alt="Picture of Jason" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            
+            <!-- Text Intro -->
+            <div>
+                <h1 style="font-size: 2.5rem; color: #333;">Hi, I'm Jason!</h1>
+                <p style="font-style: italic;">Cat, 2 years old</p>
+            </div>
+        </div>
+
+        <!-- Jason's Story -->
+        <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: left; font-size: 1.2rem; color: #555; line-height: 1.8;">
+            <p>Hey there, I’m Jason – but you can call me King of the House. I was found on Friday the 13th (spooky, right?), but don’t let that fool you – it was the luckiest day of my life. I strutted my way into my human’s life like I owned the place, and let’s be honest, I pretty much do.</p>
+
+            <h2>Likes:</h2>
+            <ul>
+                <li>Playing hide and scare with my mam – nothing like hearing her yell "Jesus, Jason!" before I bolt away.</li>
+                <li>Knocking over cups (the noisier the better).</li>
+                <li>Cuddles... on my terms. I choose the time and place, obviously.</li>
+                <li>Sleeping in the weirdest, most inconvenient spots – usually when my dad's trying to work.</li>
+                <li>Treats, snacks, and the occasional sneak into the kitchen cupboards (I'm a pro at opening them).</li>
+            </ul>
+
+            <h2>Dislikes:</h2>
+            <ul>
+                <li>Being told "no" – especially when it comes to extra treats.</li>
+                <li>Baths (what's the deal with water, seriously?).</li>
+                <li>Closed doors. If there's a door in the house, I need it open immediately.</li>
+                <li>When my mam or dad moves me from "my" spot. Hello, I was comfortable!</li>
+            </ul>
+
+            <h2>About My Mam & Dad:</h2>
+            <p>My mam is sweet, but she can be a bit dramatic when I scare her. Honestly, it's my favorite game. She’s always so easy to startle! My dad? Well, he's the one who feeds me, so naturally, I have to remind him about mealtimes (which is, like, every hour, if you ask me).</p>
+            <p>They think they’re in charge, but let’s be real here – I run this house. It’s cute that they try, though. I love them anyway, even if they don’t always give me as many treats as I deserve.</p>
+
+            <h2>Looking for:</h2>
+            <p>More fans to follow my adventures, obviously! If you like cats with big personalities, endless mischief, and a love for all things snack-related, then you’ll love following me. Join me on my journey of ruling this household and keeping my humans on their toes.</p>
+
+            <h2>And... maybe some feline company?</h2>
+            <p>Okay, I'll admit it – this king is looking for a queen (or maybe a partner-in-crime). I could use a fellow feline to keep me company when my humans are busy being, well, human. Must love adventure, sneaking around, and know the art of demanding attention. Bonus points if you enjoy late-night zoomies and knocking things over for fun. Let’s be honest, there's room in this kingdom for two, as long as you know who's boss. And hey, if you’re a fellow feline, don’t be shy—send your most <em>purrfect</em> paw-traits my way. I’m always on the lookout for some fine whiskers and fluffy tails. Who knows, we might just have a meow-nificent connection!</p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Pawject</p>
+    </footer>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; /* Ensure body and html elements take up full height of the screen */
+}
+
+/* Body and Font Styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font */
+    line-height: 1.6;
+    color: #555; /* Default text color */
+    background-color: #f9f9f9; /* Background color */
+}
+
+/* Navigation Bar Styles */
+header {
+    background-color: #222; /* Black background */
+    position: fixed; /* Fixes the header at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Aligns at the top */
+    z-index: 1000; /* Ensures it's on top of other elements */
+    padding: 10px 0; /* Adjust padding for better spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+}
+
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Increase horizontal spacing between items */
+}
+
+nav ul li a {
+    color: #fff; /* White text color for contrast */
+    font-size: 18px; /* Font size */
+    padding: 10px 15px; /* Padding for links */
+    font-weight: 500; /* Font weight */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Background on hover */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: underline;
+}
+
+/* Hamburger Icon Styling for Mobile */
+.menu-icon {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #222;
+    }
+
+    .menu-icon {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* About Section Styling */
+#about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about em {
+    font-size: 1rem;
+    color: #666;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #333;
+}
+
+.about-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.about-content ul li::before {
+    content: '🐾 '; /* Adds paw emoji next to each list item */
+}
