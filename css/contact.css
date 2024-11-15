@@ -1,0 +1,132 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Bar Styles */
+header {
+    background-color: #222; /* Black background */
+    position: fixed; /* Fixes the header at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Aligns at the top */
+    z-index: 1000; /* Ensures it's on top of other elements */
+    padding: 10px 0; /* Adjust padding for better spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+}
+
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Increase horizontal spacing between items */
+}
+
+nav ul li a {
+    color: #fff; /* White text color for contrast */
+    font-size: 18px; /* Font size */
+    padding: 10px 15px; /* Padding for links */
+    font-weight: 500; /* Font weight */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Background on hover */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: underline;
+}
+
+/* Hamburger Icon Styling for Mobile */
+.menu-icon {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #222;
+    }
+
+    .menu-icon {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* Contact Section Styling */
+#contact {
+    text-align: center;
+    padding: 60px 20px; /* Adds more space at the top */
+    margin-top: 20px; /* Adds spacing between navbar and section */
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Contact Methods Styling */
+.contact-methods p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.contact-methods i {
+    color: #ff5722;
+    margin-right: 8px;
+}
+
+.contact-methods a {
+    color: #444;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-methods a:hover {
+    color: #ff5722;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #444;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 20px;
+}

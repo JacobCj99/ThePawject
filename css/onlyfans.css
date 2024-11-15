@@ -1,0 +1,56 @@
+/* Fullscreen Styling for Body and HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #000; /* Black background to enhance GIF visibility */
+}
+
+/* Go Back Button Styling */
+.go-back-button {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    text-align: center;
+    z-index: 10; /* Keeps button on top */
+}
+
+.go-back-button a {
+    color: #fff;
+    background-color: #ff5722; /* Primary button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds a soft shadow for depth */
+}
+
+.go-back-button a:hover {
+    background-color: #ff784e; /* Hover effect color */
+}
+
+/* Overlay Container and Background GIF Styling */
+.overlay {
+    position: relative;
+    text-align: center;
+    color: white; /* Sets overlay text color */
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/css/nonope.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers text in the middle of the overlay */
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow to text for contrast */
+}

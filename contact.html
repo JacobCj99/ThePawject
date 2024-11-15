@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Pawject | Contact</title>
+    <link rel="stylesheet" href="css/mainpage.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        // JavaScript function to copy email to clipboard
+        function copyEmailToClipboard() {
+            const email = "jasondkittyking@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy email: ", err);
+            });
+        }
+
+        // JavaScript for Toggle Menu
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <!-- Hamburger Icon for Mobile -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- Navigation Links -->
+            <ul id="menu" class="nav-links">
+                <li><a href="index.html"><i class="fas fa-paw"></i> Home</a></li>
+                <li><a href="blog.html"><i class="fas fa-paw"></i> Blog</a></li>
+                <li><a href="about.html"><i class="fas fa-paw"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-paw"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us through the following platforms:</p>
+        
+        <!-- Contact Methods -->
+        <div class="contact-methods">
+            <p>
+                <i class="fas fa-envelope"></i> 
+                Email: <a href="javascript:void(0);" onclick="copyEmailToClipboard()">contact: jasondkittyking@gmail.com</a>
+            </p>
+            <p><i class="fab fa-instagram"></i> Instagram: <a href="https://www.instagram.com/jasondking13/" target="_blank">@jasondking13</a></p>
+            <p><i class="fas fa-paw"></i> OnlyFans: <a href="onlyfans.html">My Onlyfans</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Pawject</p>
+    </footer>
+
+</body>
+</html>

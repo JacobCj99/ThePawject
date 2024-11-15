@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta and Title Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>I'm Not That Type of Boy</title>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="/css/onlyfans.css">
+    <style>
+        /* Fullscreen Styling for Body and HTML */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            background-color: #000; /* Black background to enhance GIF visibility */
+        }
+
+        /* Go Back Button Styling */
+        .go-back-button {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            text-align: center;
+            z-index: 10; /* Keeps button on top */
+        }
+
+        .go-back-button a {
+            color: #fff;
+            background-color: #ff5722; /* Primary button color */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds a soft shadow for depth */
+        }
+
+        .go-back-button a:hover {
+            background-color: #ff784e; /* Hover effect color */
+        }
+
+        /* Overlay Container and Background GIF Styling */
+        .overlay {
+            position: relative;
+            text-align: center;
+            color: white; /* Sets overlay text color */
+            width: 100vw;
+            height: 100vh;
+            background-image: url(/css/nonope.gif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .overlay h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centers text in the middle of the overlay */
+            font-size: 3em;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow to text for contrast */
+        }
+
+        /* Mobile-specific styling for Go Back Button */
+        @media (max-width: 768px) {
+            .go-back-button {
+                top: 10px; /* Adjusts button position closer to the top */
+                left: 10px; /* Aligns button to the left edge */
+                transform: none; /* Removes centering transform */
+            }
+
+            .go-back-button a {
+                font-size: 1em; /* Reduces font size for better fit */
+                padding: 8px 15px; /* Adjusts padding for smaller screens */
+                white-space: nowrap; /* Prevents text from breaking onto multiple lines */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Go Back Button Section -->
+    <div class="go-back-button">
+        <!-- Link directing to 'contact.html' -->
+        <a href="contact.html">Go back, you perv</a>
+    </div>
+    
+    <!-- Main Content: Fullscreen GIF with overlay text -->
+    <div class="overlay">
+        <h1>I'm not that type of boy</h1>
+    </div>
+</body>
+</html>
