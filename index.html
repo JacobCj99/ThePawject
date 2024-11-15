@@ -66,7 +66,7 @@
         }
 
         async function fetchInstagramPhotos() {
-            const accessToken = 'IGQWROQ2k4cnltT1BXc1BHMG9NdHpzcDhOUlNWSUwwNG9DZAjFwNW94VUtyc2VUQ3dheUwxWmpqTnRRN3pHZA0wzR0dTQXBTbHZAfUjhLSlNKZA2lYLTlPcGlpSUg4eWJLYVI3dlRCRjRuOFdMbHItdnBrN3BOSGcxYmcZD'; 
+            const accessToken = 'IGQWROV2NuM3FKOFdScmNKR241RFRGTldQbTVQZAzVMNmg2ekcyQjZAkM1dkWm45SnVWRHhPR2l6UmlqWUFJRm1kYlZABME41M21uNUZAvUkROSlBNZAnZAKRkt6MWY3NzlZAd2k1RXRpZAnk2YXFQZA0VDSTM1SWRrQnFXbGcZD'; 
             const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,thumbnail_url,permalink&access_token=${accessToken}`);
             const data = await response.json();
 
