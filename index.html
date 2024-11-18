@@ -51,6 +51,13 @@
     <section id="instagram-feed-section">
         <h2>Follow Us on Instagram</h2>
         <div id="instagram-feed"></div>
+        <!-- Fallback Message -->
+        <div id="instagram-fallback" style="display: none; text-align: center; margin-top: 20px;">
+            <p>Sorry, we couldn’t load the Instagram feed. Check it out directly on Instagram instead!</p>
+            <button onclick="window.location.href='https://instagram.com/jasondking13'" class="btn-instagram-link">
+                Visit Instagram
+            </button>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -64,47 +71,44 @@
             const menu = document.getElementById("menu");
             menu.classList.toggle("active");
         }
-async function fetchInstagramPhotos() {
-    const accessToken = 'IGQWROeHl6YjJLSk5vbGo2Nml2d3pWd0x1M0pERE9pSE15YU16MlZA2bXNFQm9jQkktNXFicjlVclNFLUZAiMk15Y1FNZAEtmNkdrMjVrV0gzRFlDeDNPMXRKeUZARWjdKRFY0Ml9OdkplT3FyaWJvVGlzLXhnZAVZAUek0ZD'; 
-    const container = document.getElementById('instagram-feed');
 
-    try {
-        const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,thumbnail_url,permalink&access_token=${accessToken}`);
-        
-        // Check if the response is OK (status 200)
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+        async function fetchInstagramPhotos() {
+            const accessToken = 'EAAcSjG3aczIBO0Nd5tRWvQWzkoE4gXRMvI9YxJA8R48qrrcEKJDKD1N4HVgGZAtBt2lKrN8PkhSZAztUlIxdmGz5yDWZBDk5fuz4FHuWN9zXDhzpkN5FuVxZArI19ZCY2a14ZCMLUjU99MkvRzEpgWUv5OcbsIKbQHoEXnUxlNLlaAf4gfSo17DebRsJGRixcU1JNk3XmAYKHnT11a2383p0tlhPS6AdM1c4GsmUw4XZAdQ6CrfSvrPaGO0S6yg3gZDZD'; 
+            const container = document.getElementById('instagram-feed');
+            const fallback = document.getElementById('instagram-fallback');
+
+            try {
+                const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,thumbnail_url,permalink&access_token=${accessToken}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                if (data.data.length === 0) {
+                    throw new Error('No photos available');
+                }
+
+                // Render Instagram photos
+                data.data.forEach(photo => {
+                    const img = document.createElement('img');
+                    img.src = photo.media_url;
+                    img.alt = photo.caption || "Instagram Photo";
+                    img.classList.add('instagram-photo'); // Add class for styling
+
+                    const link = document.createElement('a');
+                    link.href = photo.permalink;
+                    link.target = "_blank";
+                    link.appendChild(img);
+
+                    container.appendChild(link);
+                });
+            } catch (error) {
+                console.error('Error fetching Instagram photos:', error);
+                fallback.style.display = 'block'; // Show fallback message
+            }
         }
 
-        const data = await response.json();
-
-        // Check if data and data.data exist and are arrays
-        if (data && Array.isArray(data.data)) {
-            data.data.forEach(photo => {
-                const img = document.createElement('img');
-                img.src = photo.media_url;
-                img.alt = photo.caption || "Instagram Photo";
-                img.classList.add('instagram-photo'); // Add class for styling
-
-                const link = document.createElement('a');
-                link.href = photo.permalink;
-                link.target = "_blank";
-                link.appendChild(img);
-
-                container.appendChild(link);
-            });
-        } else {
-            console.error("No valid data found from Instagram API.");
-        }
-    } catch (error) {
-        console.error("Failed to fetch Instagram photos:", error);
-    }
-}
-
-// Call the function
-fetchInstagramPhotos();
-            </script>
+        fetchInstagramPhotos();
+    </script>
 </body>
 </html>
-
-
